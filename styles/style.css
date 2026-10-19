@@ -1,0 +1,177 @@
+/* VARIABLES */
+
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+    --header-background-color: #870404d5;
+    --button-hover-color: #555555;
+    --border-color: #cccccc;
+    --table-header-color: #333333;
+    --delete-color: #e74c3c;
+    --delete-hover-color: #c0392b;
+    --edit-color: #3498db;
+    --edit-hover-color: #2980b9;
+}
+
+
+/* ESTILOS GENERALES */
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* HEADER Y FOOTER */
+
+header,
+footer {
+    background-color: var(--header-background-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+
+/* FORMULARIOS */
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+
+/* BOTONES */
+
+button {
+    padding: 0.6rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+
+/* BOTON ELIMINAR */
+
+.delete-button {
+    background-color: var(--delete-color);
+}
+
+.delete-button:hover {
+    background-color: var(--delete-hover-color);
+}
+
+
+/* BOTON EDITAR */
+
+.edit-button {
+    background-color: var(--edit-color);
+}
+
+.edit-button:hover {
+    background-color: var(--edit-hover-color);
+}
+
+
+/* TABLAS */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead {
+    background-color: var(--table-header-color);
+    color: white;
+}
+
+th,
+td {
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+
+/* CAMPOS DE EDICION DENTRO DE LA TABLA */
+
+td input,
+td select {
+    min-width: 120px;
+    margin: 0;
+}
+
+
+/* RESULTADOS DE BUSQUEDA */
+
+#filtered-film {
+    margin-top: 1rem;
+}
+
+#filtered-film table {
+    margin-top: 1rem;
+}

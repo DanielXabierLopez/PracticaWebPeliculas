@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Videoclub Online</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>¡Bienvenido al videoclub!</h1>
+    </header>
+
+    <main>
+
+        <!-- AÑADIR PELÍCULA -->
+        <section id="add-film">
+
+            <h2>Añadir Película</h2>
+
+            <form id="film-form">
+
+                <label for="title">Título:</label>
+                <input type="text" id="title" required>
+
+                <label for="date">Fecha:</label>
+                <input type="number" id="date" required>
+
+                <label for="director">Director/a:</label>
+                <input type="text" id="director" required>
+
+                <label for="genre">Género:</label>
+
+                <select id="genre" required>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Ciencia Ficcion">Ciencia Ficción</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Accion">Acción</option>
+                </select>
+
+                <button type="submit">Añadir Película</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- BÚSQUEDA POR TÍTULO -->
+        <section id="unique-filter">
+
+            <h2>Buscar por título</h2>
+
+            <div>
+                <label for="title-filter">Introduzca título:</label>
+
+                <input
+                    type="text"
+                    id="title-filter"
+                    placeholder="Buscar título"
+                >
+
+                <button type="button" id="title-search-button">
+                    Buscar
+                </button>
+
+                <button type="button" id="title-clear-button">
+                    Limpiar
+                </button>
+            </div>
+
+            <div id="filtered-film">
+                <!-- Aquí se mostrará la tabla con los resultados -->
+            </div>
+
+        </section>
+
+
+        <!-- FILTROS COMBINADOS -->
+        <section id="combined-filters">
+
+            <h2>Filtros combinados</h2>
+
+            <label for="date-filter">Filtro por fecha:</label>
+
+            <select id="date-filter">
+                <option value="all">Todas</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+            </select>
+
+
+            <label for="genre-filter">Filtro por género:</label>
+
+            <select id="genre-filter">
+                <option value="all">Todos</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Ciencia Ficcion">Ciencia Ficción</option>
+                <option value="Terror">Terror</option>
+                <option value="Drama">Drama</option>
+                <option value="Accion">Acción</option>
+            </select>
+
+
+            <label for="director-search">Buscar por director:</label>
+
+            <input
+                type="text"
+                id="director-search"
+                placeholder="Introduce director"
+            >
+
+        </section>
+
+
+        <!-- LISTADO DE PELÍCULAS -->
+        <section id="film-list">
+
+            <h2>Películas</h2>
+
+            <div class="table-container">
+
+                <table id="films-table">
+
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Fecha</th>
+                            <th>Director/a</th>
+                            <th>Género</th>
+                           <!-- <th>Acciones</th>-->
+                        </tr>
+                    </thead>
+
+                    <tbody id="films">
+                        <!-- JavaScript insertará aquí las películas -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Daniel Xabier Lopez Garcia Project</p>
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
