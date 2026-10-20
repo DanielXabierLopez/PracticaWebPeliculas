@@ -1,6 +1,4 @@
-/**************************************************
- * DATOS INICIALES
- **************************************************/
+//DATOS INICIALES
 
 const films = [
     {
@@ -36,9 +34,7 @@ const films = [
 ];
 
 
-/**************************************************
- * PINTAR TABLA PRINCIPAL
- **************************************************/
+// PINTAR TABLA PRINCIPAL
 
 function renderFilmList(filmData) {
     const filmList = document.getElementById("films");
@@ -61,9 +57,7 @@ function renderFilmList(filmData) {
 }
 
 
-/**************************************************
- * AÑADIR PELÍCULA
- **************************************************/
+//AÑADIR PELÍCULA
 
 document.getElementById("film-form").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -95,9 +89,7 @@ document.getElementById("film-form").addEventListener("submit", (event) => {
 });
 
 
-/**************************************************
- * BUSCAR POR TÍTULO
- **************************************************/
+//BUSCAR POR TÍTULO
 
 function filterByTitle(title) {
     return films.filter((film) =>
@@ -108,9 +100,7 @@ function filterByTitle(title) {
 }
 
 
-/**************************************************
- * PINTAR RESULTADOS DE BÚSQUEDA EN UNA TABLA
- **************************************************/
+//PINTAR RESULTADOS DE BÚSQUEDA EN UNA TABLA
 
 function renderSearchResults(filmData) {
     const filteredFilm = document.getElementById("filtered-film");
@@ -161,9 +151,7 @@ function renderSearchResults(filmData) {
 }
 
 
-/**************************************************
- * BOTÓN BUSCAR POR TÍTULO
- **************************************************/
+//BOTÓN BUSCAR POR TÍTULO
 
 document
     .getElementById("title-search-button")
@@ -179,9 +167,7 @@ document
     });
 
 
-/**************************************************
- * BOTÓN LIMPIAR BÚSQUEDA
- **************************************************/
+//BOTÓN LIMPIAR BÚSQUEDA
 
 document
     .getElementById("title-clear-button")
@@ -191,9 +177,7 @@ document
     });
 
 
-/**************************************************
- * FILTROS COMBINADOS
- **************************************************/
+//FILTROS COMBINADOS
 
 function filterFilms(filterDate, filterGenre, searchDirector) {
     return films.filter((film) => {
@@ -220,9 +204,7 @@ function filterFilms(filterDate, filterGenre, searchDirector) {
 }
 
 
-/**************************************************
- * APLICAR FILTROS COMBINADOS
- **************************************************/
+//APLICAR FILTROS COMBINADOS
 
 function applyFilters() {
     const dateFilter = document.getElementById("date-filter").value;
@@ -243,9 +225,7 @@ function applyFilters() {
 }
 
 
-/**************************************************
- * EVENTOS DE LOS FILTROS
- **************************************************/
+//EVENTOS DE LOS FILTROS
 
 document
     .getElementById("date-filter")
@@ -260,9 +240,7 @@ document
     .addEventListener("input", applyFilters);
 
 
-/**************************************************
- * CARGA INICIAL
- **************************************************/
+//CARGA INICIAL
 
 document.addEventListener("DOMContentLoaded", () => {
     renderFilmList(films);
